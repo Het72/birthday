@@ -1,0 +1,25 @@
+.petal-field {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.petal-item {
+  position: absolute;
+  top: 0;
+  filter: drop-shadow(0 2px 3px rgba(200, 120, 150, 0.15));
+}
+
+.sparkle-item {
+  position: absolute;
+}
+
+.butterfly-item {
+  position: absolute;
+  left: 0;
+  filter: drop-shadow(0 2px 4px rgba(180, 140, 100, 0.2));
+}

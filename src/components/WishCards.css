@@ -1,0 +1,60 @@
+.wishes {
+  position: relative;
+  z-index: 2;
+  padding: 40px 24px 90px;
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.wishes-eyebrow {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--rose-deep);
+  margin-bottom: 34px;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+}
+
+.wishes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.wish-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(224, 171, 77, 0.25);
+  border-radius: 22px;
+  padding: 36px 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 10px 26px rgba(190, 140, 160, 0.14);
+}
+
+.wish-card__icon {
+  margin-bottom: 4px;
+}
+
+.wish-card__title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--rose-deep);
+}
+
+.wish-card__text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 820px) {
+  .wishes-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}

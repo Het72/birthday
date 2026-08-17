@@ -1,0 +1,47 @@
+.app {
+  position: relative;
+  overflow: hidden;
+}
+
+.confetti-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.confetti-layer.is-visible {
+  opacity: 1;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -10vh;
+  border-radius: 3px;
+  opacity: 0;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  animation-name: confetti-fall;
+  animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);
+  animation-fill-mode: forwards;
+}
+
+@keyframes confetti-fall {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(0.7);
+  }
+  12% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--confetti-drift), 110vh, 0) rotate(540deg) scale(1);
+  }
+}
+
+main {
+  position: relative;
+  z-index: 2;
+}

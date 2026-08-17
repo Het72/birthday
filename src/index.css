@@ -1,0 +1,91 @@
+:root {
+  /* ---- Palette ---- */
+  --blush: #ffd6e6;
+  --blush-deep: #f7a8c4;
+  --lavender: #e6d9f7;
+  --lavender-deep: #c9aef0;
+  --peach: #ffe2c6;
+  --peach-deep: #ffc79a;
+  --cream: #fff8f2;
+  --white: #ffffff;
+  --gold: #e0ab4d;
+  --gold-soft: #f3d69b;
+  --rose-deep: #9b2f59;
+  --leaf: #8fb99a;
+  --leaf-deep: #6a9c78;
+  --ink: #5b3d52;
+  --ink-soft: #8a6b81;
+
+  /* ---- Type ---- */
+  --font-script: "Alex Brush", cursive;
+  --font-display: "Playfair Display", serif;
+  --font-body: "Quicksand", sans-serif;
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: linear-gradient(180deg, #fff6f9 0%, #fdf1f6 18%, #f6ecf9 40%, #fdf1e9 62%, #fff6ea 82%, #fff9f2 100%);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  position: relative;
+  isolation: isolate;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+img, svg {
+  display: block;
+}
+
+::selection {
+  background: var(--blush-deep);
+  color: var(--white);
+}
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-eyebrow {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--rose-deep);
+  font-size: clamp(0.85rem, 1.4vw, 1rem);
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
